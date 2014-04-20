@@ -10,14 +10,3 @@
 #import "Team.h"
 #import "KWSDateMatcher.h"
 
-SPEC_BEGIN(NSDateSpec)
-
-registerMatchers(@"KWS");
-
-describe(@"NSDate", ^{
-    it(@"3月であること", ^{
-        
-    });
-});
-
-SPEC_END

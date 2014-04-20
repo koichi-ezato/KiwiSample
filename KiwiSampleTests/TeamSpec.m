@@ -11,16 +11,21 @@
 
 SPEC_BEGIN(TeamSpec)
 
-describe(@"NSUserDefaults", ^{
-    describe(@"stringForKey:の場合", ^{
-        it(@"nameは「Sample」であること", ^{
-            NSArray *array = [NSArray arrayWithObject:@"foo"];
-            [[[array should] have:1] items];
-            
-//            Car *car = [Car car];
-//            [car setPassengers:[NSArray arrayWithObjects:@"Eric", "Stan", nil]];
-//            [[[[car passengers] should] haveAtLeast:2] items];
-//            [[[car should] haveAtLeast:2] passengers];
+describe(@"teamWithName:", ^{
+    context(@"引数がある場合", ^{
+        it(@"nameが「テストチーム」であること", ^{
+            Team *team = [Team teamWithName:@"テストチーム"];
+            [[team.name should] equal:@"テストチーム"];
+        });
+        it(@"nameが空ではないこと", ^{
+            Team *team = [Team teamWithName:@"テストチーム"];
+            [[team.name shouldNot] beNil];
+        });
+    });
+    context(@"引数がない場合", ^{
+        it(@"nameが空であること", ^{
+            Team *team = [Team teamWithName:nil];
+            [[team.name should] beNil];
         });
     });
 });
