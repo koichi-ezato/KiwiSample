@@ -17,7 +17,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    #ifdef DEBUG
     [TestFlight passCheckpoint:@"チェックポイント"];
+    #endif
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,8 +31,10 @@
     [NSException raise:@"TestException" format:@"テスト"];
 }
 - (IBAction)feedback:(id)sender {
+    #ifdef DEBUG
     NSString *feedback = @"フィードバックテスト";
     [TestFlight submitFeedback:feedback];
+    #endif
 }
 
 @end
