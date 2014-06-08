@@ -17,13 +17,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [TestFlight passCheckpoint:@"チェックポイント"];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)exception:(id)sender {
+    [NSException raise:@"TestException" format:@"テスト"];
+}
+- (IBAction)feedback:(id)sender {
+    NSString *feedback = @"フィードバックテスト";
+    [TestFlight submitFeedback:feedback];
 }
 
 @end

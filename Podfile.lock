@@ -9,12 +9,15 @@ PODS:
   - Kiwi/XCTest (2.2.3):
     - Kiwi/ARC
     - Kiwi/NonARC
+  - TestFlightSDK (3.0.2)
 
 DEPENDENCIES:
   - Kiwi
   - Kiwi/XCTest
+  - TestFlightSDK
 
 SPEC CHECKSUMS:
-  Kiwi: 04c51e880831d291748ec702d42c4101f7eb95c9
+  Kiwi: 7b9bc7294de746357213067a1df49cc0a59384e8
+  TestFlightSDK: 0c24c533748d0d84bfe7a3cb6036fa79124d84ee
 
 COCOAPODS: 0.32.1

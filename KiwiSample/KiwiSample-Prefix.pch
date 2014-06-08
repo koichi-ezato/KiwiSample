@@ -14,3 +14,11 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#ifdef DEBUG
+#import <TestFlightSDK/TestFlight.h>
+#endif
+
+#ifdef DEBUG
+#define NSLog(__FORMAT__, ...) TFLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#endif

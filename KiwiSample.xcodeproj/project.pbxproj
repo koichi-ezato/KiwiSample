@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DC48D9EA80547D2B3CB262F /* libPods-KiwiSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8B45C5401E4A60B7845895 /* libPods-KiwiSample.a */; };
 		B65FBBBF18C8AE7300C9CA55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65FBBBE18C8AE7300C9CA55 /* Foundation.framework */; };
 		B65FBBC118C8AE7300C9CA55 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65FBBC018C8AE7300C9CA55 /* CoreGraphics.framework */; };
 		B65FBBC318C8AE7300C9CA55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65FBBC218C8AE7300C9CA55 /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C250EDC8E914894BFF67C98 /* Pods-KiwiSample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiSample.xcconfig"; path = "Pods/Pods-KiwiSample.xcconfig"; sourceTree = "<group>"; };
+		7D8B45C5401E4A60B7845895 /* libPods-KiwiSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KiwiSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AF61242E9FC42DFBC754427 /* Pods-KiwiSampleTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiSampleTests.xcconfig"; path = "Pods/Pods-KiwiSampleTests.xcconfig"; sourceTree = "<group>"; };
 		B65FBBBB18C8AE7300C9CA55 /* KiwiSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiwiSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65FBBBE18C8AE7300C9CA55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -74,6 +77,7 @@
 				B65FBBC118C8AE7300C9CA55 /* CoreGraphics.framework in Frameworks */,
 				B65FBBC318C8AE7300C9CA55 /* UIKit.framework in Frameworks */,
 				B65FBBBF18C8AE7300C9CA55 /* Foundation.framework in Frameworks */,
+				2DC48D9EA80547D2B3CB262F /* libPods-KiwiSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,7 @@
 				B65FBBBD18C8AE7300C9CA55 /* Frameworks */,
 				B65FBBBC18C8AE7300C9CA55 /* Products */,
 				8AF61242E9FC42DFBC754427 /* Pods-KiwiSampleTests.xcconfig */,
+				6C250EDC8E914894BFF67C98 /* Pods-KiwiSample.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +124,7 @@
 				B65FBBC218C8AE7300C9CA55 /* UIKit.framework */,
 				B65FBBDD18C8AE7300C9CA55 /* XCTest.framework */,
 				C5C677C108D9493BB6A9A86B /* libPods-KiwiSampleTests.a */,
+				7D8B45C5401E4A60B7845895 /* libPods-KiwiSample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B65FBBED18C8AE7400C9CA55 /* Build configuration list for PBXNativeTarget "KiwiSample" */;
 			buildPhases = (
+				53281FD77FCF4210B7D5F0F9 /* Check Pods Manifest.lock */,
 				B65FBBB718C8AE7300C9CA55 /* Sources */,
 				B65FBBB818C8AE7300C9CA55 /* Frameworks */,
 				B65FBBB918C8AE7300C9CA55 /* Resources */,
+				269ABC8DFA9D4CBCB9FB63A7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +275,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		269ABC8DFA9D4CBCB9FB63A7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-KiwiSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		47509005A4C6430EAB39BD64 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +303,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-KiwiSampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53281FD77FCF4210B7D5F0F9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		5B69B30BE3BC4726866B69CF /* Check Pods Manifest.lock */ = {
@@ -376,7 +414,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -417,7 +455,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -430,6 +469,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -437,9 +477,11 @@
 		};
 		B65FBBEE18C8AE7400C9CA55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C250EDC8E914894BFF67C98 /* Pods-KiwiSample.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KiwiSample/KiwiSample-Prefix.pch";
 				INFOPLIST_FILE = "KiwiSample/KiwiSample-Info.plist";
@@ -450,9 +492,11 @@
 		};
 		B65FBBEF18C8AE7400C9CA55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C250EDC8E914894BFF67C98 /* Pods-KiwiSample.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KiwiSample/KiwiSample-Prefix.pch";
 				INFOPLIST_FILE = "KiwiSample/KiwiSample-Info.plist";
