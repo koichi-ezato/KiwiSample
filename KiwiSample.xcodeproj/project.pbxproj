@@ -39,9 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6C250EDC8E914894BFF67C98 /* Pods-KiwiSample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiSample.xcconfig"; path = "Pods/Pods-KiwiSample.xcconfig"; sourceTree = "<group>"; };
 		7D8B45C5401E4A60B7845895 /* libPods-KiwiSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KiwiSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AF61242E9FC42DFBC754427 /* Pods-KiwiSampleTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiSampleTests.xcconfig"; path = "Pods/Pods-KiwiSampleTests.xcconfig"; sourceTree = "<group>"; };
 		B65FBBBB18C8AE7300C9CA55 /* KiwiSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiwiSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65FBBBE18C8AE7300C9CA55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B65FBBC018C8AE7300C9CA55 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -102,8 +100,6 @@
 				B65FBBE318C8AE7300C9CA55 /* KiwiSampleTests */,
 				B65FBBBD18C8AE7300C9CA55 /* Frameworks */,
 				B65FBBBC18C8AE7300C9CA55 /* Products */,
-				8AF61242E9FC42DFBC754427 /* Pods-KiwiSampleTests.xcconfig */,
-				6C250EDC8E914894BFF67C98 /* Pods-KiwiSample.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,7 +222,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = KWS;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = suwa.yuki;
 				TargetAttributes = {
 					B65FBBDB18C8AE7300C9CA55 = {
@@ -401,7 +397,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -416,6 +411,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
@@ -442,7 +438,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -477,7 +472,6 @@
 		};
 		B65FBBEE18C8AE7400C9CA55 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C250EDC8E914894BFF67C98 /* Pods-KiwiSample.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -485,6 +479,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KiwiSample/KiwiSample-Prefix.pch";
 				INFOPLIST_FILE = "KiwiSample/KiwiSample-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -492,7 +487,6 @@
 		};
 		B65FBBEF18C8AE7400C9CA55 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C250EDC8E914894BFF67C98 /* Pods-KiwiSample.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -500,6 +494,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KiwiSample/KiwiSample-Prefix.pch";
 				INFOPLIST_FILE = "KiwiSample/KiwiSample-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -507,9 +502,7 @@
 		};
 		B65FBBF118C8AE7400C9CA55 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AF61242E9FC42DFBC754427 /* Pods-KiwiSampleTests.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KiwiSample.app/KiwiSample";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -523,6 +516,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "KiwiSampleTests/KiwiSampleTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -531,9 +525,7 @@
 		};
 		B65FBBF218C8AE7400C9CA55 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AF61242E9FC42DFBC754427 /* Pods-KiwiSampleTests.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KiwiSample.app/KiwiSample";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -543,6 +535,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KiwiSample/KiwiSample-Prefix.pch";
 				INFOPLIST_FILE = "KiwiSampleTests/KiwiSampleTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.self.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
